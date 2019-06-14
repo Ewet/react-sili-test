@@ -14,12 +14,12 @@ import './index.css';
 //       );
 //     }
 //   }
-// 函数式组件
+// 函数式组件 
   function Square(props) {
     return (
       <button className="square" onClick={props.onClick}>
         {props.value}
-      </button>
+      </button>   
     );
   }
   
