@@ -1,9 +1,15 @@
 import React from 'react';
+import IndexRouter from '../pages/index/router';
 import { Layout, Menu, Icon } from 'antd';
 const { SubMenu } = Menu;
 const { Header, Content, Sider, Footer } = Layout;
 
-const FramLayout = () => {
+const FramLayout = (props) => {
+  // 页面逻辑
+
+
+
+
   return   <Layout>
   <Header className="header">
     <div className="logo" />
@@ -51,7 +57,7 @@ const FramLayout = () => {
           minHeight: 520,
         }}
       >
-        Content
+        <IndexRouter />
       </Content>
     </Layout>
   </Layout>
