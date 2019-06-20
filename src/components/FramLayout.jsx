@@ -7,21 +7,19 @@ const { Header, Content, Sider, Footer } = Layout;
 const FramLayout = (props) => {
   // 页面逻辑
 
-
-
-
+  
   return   <Layout>
   <Header className="header">
     <div className="logo" />
     <Menu
       theme="dark"
       mode="horizontal"
-      defaultSelectedKeys={['2']}
+      defaultSelectedKeys={['1']}
       style={{ lineHeight: '64px', textAlign: 'right' }}
     >
-      <Menu.Item key="1">nav 1</Menu.Item>
-      <Menu.Item key="2">nav 2</Menu.Item>
-      <Menu.Item key="3">nav 3</Menu.Item>
+      <Menu.Item key="1">建档管理</Menu.Item>
+      <Menu.Item key="2">续当管理</Menu.Item>
+      <Menu.Item key="3">赎当管理</Menu.Item>
     </Menu>
   </Header>
   <Layout>
@@ -37,14 +35,14 @@ const FramLayout = (props) => {
           title={
             <span>
               <Icon type="user" />
-              subnav 1
+              建档管理
             </span>
           }
         >
-          <Menu.Item key="1">option1</Menu.Item>
-          <Menu.Item key="2">option2</Menu.Item>
-          <Menu.Item key="3">option3</Menu.Item>
-          <Menu.Item key="4">option4</Menu.Item>
+          <Menu.Item key="1">完成订单</Menu.Item>
+          <Menu.Item key="2">过期订单</Menu.Item>
+          <Menu.Item key="3">快逾期订单</Menu.Item>
+          <Menu.Item key="4">逾期订单</Menu.Item>
         </SubMenu>
       </Menu>
     </Sider>
