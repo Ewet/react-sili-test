@@ -42,7 +42,8 @@ const FramLayout = (props) => {
               <Menu.Item key="1"><Link to='/index'>首页</Link></Menu.Item>
               <Menu.Item key="2"><Link to='/outTime/3333'>动态传值</Link></Menu.Item>
               <Menu.Item key="3"><Link to='/urlModel?cid=123'>url 模块获取get传值</Link></Menu.Item>
-              <Menu.Item key="4">逾期订单</Menu.Item>
+              <Menu.Item key="4"><Link to='/redux'>redux</Link></Menu.Item>
+              <Menu.Item key="5"><Link to='/reminder'>reminder pro</Link></Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
