@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 // redux
 import { Provider } from 'react-redux'
 import {createStore, applyMiddleware} from 'redux';
-import indexReducer from './reducers'
+import indexReducer from '../../redux/reducers/indexReducers'
 
 // redux-devtools-extension,redux-logger
 import {logger} from 'redux-logger';

@@ -1,4 +1,7 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux';
+import { addReminder } from '../../redux/actions/reminder';
+
 class Reminder extends Component{
     constructor(props) {
         super(props);
@@ -7,7 +10,22 @@ class Reminder extends Component{
         };
     }
     addItem() {
-        
+        this.props.addReminder(this.state.text)
+    }
+    writeReminder() {
+        const { reminders } = this.props;
+        return (
+            <ul>
+            {
+                reminders.map(x => {
+                    return (
+                        <li key={x.id}>{x.text}</li>
+                    )
+                })
+            }
+              
+            </ul>
+        )
     }
 
     render() {
@@ -22,8 +40,21 @@ class Reminder extends Component{
                     />&nbsp;
                     <button onClick={(e) => this.addItem()}> 提交</button>
                 </div>
+                {
+                    this.writeReminder()
+                }
             </div>
         )
     }
 }
-export default Reminder;
+
+const mapStateToProps = (state) => {
+    return {
+        reminders: state.reminderState
+    }
+}
+
+
+const ReminderHtml = connect(mapStateToProps, {addReminder})(Reminder)
+
+export default ReminderHtml;
