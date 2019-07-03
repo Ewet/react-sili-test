@@ -44,6 +44,7 @@ const FramLayout = (props) => {
               <Menu.Item key="3"><Link to='/urlModel?cid=123'>url 模块获取get传值</Link></Menu.Item>
               <Menu.Item key="4"><Link to='/redux'>redux</Link></Menu.Item>
               <Menu.Item key="5"><Link to='/reminder'>reminder pro</Link></Menu.Item>
+              <Menu.Item key="6"><Link to='/lifeTimesFun'>生命周期函数</Link></Menu.Item>
             </SubMenu>
             <SubMenu
               key="sub2"
