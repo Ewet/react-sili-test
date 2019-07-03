@@ -35,7 +35,7 @@ const FramLayout = (props) => {
               title={
                 <span>
                   <Icon type="user" />
-                  建档管理
+                  测试功能点
                 </span>
               }
             >
@@ -44,6 +44,17 @@ const FramLayout = (props) => {
               <Menu.Item key="3"><Link to='/urlModel?cid=123'>url 模块获取get传值</Link></Menu.Item>
               <Menu.Item key="4"><Link to='/redux'>redux</Link></Menu.Item>
               <Menu.Item key="5"><Link to='/reminder'>reminder pro</Link></Menu.Item>
+            </SubMenu>
+            <SubMenu
+              key="sub2"
+              title={
+                <span>
+                  <Icon type="user" />
+                  小型demo
+                </span>
+              }
+            >
+              <Menu.Item key="1"><Link to='/comment'>评论功能</Link></Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>

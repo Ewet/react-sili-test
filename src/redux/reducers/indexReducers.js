@@ -1,4 +1,4 @@
-import {combineReducers} from 'redux';
+import {combineReducers} from 'redux'; // 合并reducer的工具类
 import { ADD_REMINDER } from '../actions/constants';
 
 const TodoReducer = (state=[], action={}) => {
