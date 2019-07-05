@@ -18,7 +18,8 @@ class CommentList extends Component{
             <div 
             className='comment-list'
             >
-                {this.props.comments.map((comment, i) => <CommentItem 
+                {this.props.comments.map((comment, i) => 
+                <CommentItem 
                 onDeleteComment={this.handleDeleteComment.bind(this)}
                 comment={comment} key={i} />)}
             </div>

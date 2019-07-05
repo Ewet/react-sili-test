@@ -55,7 +55,8 @@ const FramLayout = (props) => {
                 </span>
               }
             >
-              <Menu.Item key="1"><Link to='/comment'>评论功能</Link></Menu.Item>
+              <Menu.Item key="7"><Link to='/comment'>评论功能</Link></Menu.Item>
+              <Menu.Item key="8"><Link to='/makeRedux'>make-redux</Link></Menu.Item>
             </SubMenu>
           </Menu>
         </Sider>
