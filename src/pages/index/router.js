@@ -8,6 +8,7 @@ import Reminder from '../../views/index/Reminder.jsx';
 import LifeTimesFun from '../../views/index/LifeTimesFun.jsx';
 import Comment from '../../views/comment/Comment.jsx';
 import MakeRedux from '../../views/makeRedux/MakeRedux.jsx';
+import Hooks from '../../views/index/Hooks.jsx';
 
 /* exact 只有当路径名与路径路径完全匹配时，该路由才应匹配。 */
 const IndexRouter = () => (
@@ -20,6 +21,7 @@ const IndexRouter = () => (
       <Route replace path='/redux' component={Redux}/>
       <Route replace path='/reminder' component={Reminder}/>
       <Route replace path='/lifeTimesFun' component={LifeTimesFun}/>
+      <Route replace path='/hooks' component={Hooks}/>
     </Switch>
     <Switch>
       <Route replace path='/comment' component={Comment}/>
