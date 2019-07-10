@@ -17,7 +17,7 @@ class Index extends React.Component {
     componentWillUnmount() {
 
     }
-    goBack = () => {
+    goBack () {
         this.setState({
             isSignIn: true
         })
@@ -30,7 +30,7 @@ class Index extends React.Component {
         return ( 
             <div className='content'> 
                 <h4>UrlModel pages</h4>
-                <button onClick={this.goBack}>跳回首页</button>
+                <button onClick={this.goBack.bind(this)}>跳回首页</button>
             </div>
         )
     }

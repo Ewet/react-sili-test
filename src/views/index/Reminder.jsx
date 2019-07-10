@@ -38,7 +38,7 @@ class Reminder extends Component{
                         placeholder='i have a ...'
                         onChange={(e) => this.setState({text: e.target.value})}
                     />&nbsp;
-                    <button onClick={(e) => this.addItem()}> 提交</button>
+                    <button onClick={() => this.addItem()}> 提交</button>
                 </div>
                 {
                     this.writeReminder()

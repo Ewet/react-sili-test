@@ -4,8 +4,8 @@ class Redux extends Component {
     render() {
         return (
             <div>
-                <input type='text' ref='todoVal' />
-                <button onClick={ () => this.props.addTodo(this.refs.todoVal.value)}>ADD TODO</button>
+                <input type='text' ref={e => {this.todoVal = e}} />
+                <button onClick={ () => this.props.addTodo(this.todoVal.value)}>ADD TODO</button>
                 <ul>
                     {this.props.listData.map((item, index) => {
                         return <li key={index}>{item}</li>
@@ -16,13 +16,13 @@ class Redux extends Component {
     }
 }
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state) => {
     return {
         listData: state.list
     }
 }
 
-const mapDispatchToProps = (dispatch, props) => {
+const mapDispatchToProps = (dispatch) => {
     return {
         addTodo: function(todoValue) {
             dispatch({

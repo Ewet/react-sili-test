@@ -12,7 +12,7 @@ class CommentInput extends Component{
             username: '',
             content: ''
         }
-    };
+    }
     componentDidMount () {
         this.textarea.focus()
     }
@@ -38,12 +38,12 @@ class CommentInput extends Component{
         this.setState({
             username: e.target.value
         })
-    };
+    }
     handleTextareaChange(e) {
         this.setState({
             content: e.target.value
         })
-    };
+    }
     handleSubmit() {
         if (this.props.onSubmit) {
             this.props.onSubmit({

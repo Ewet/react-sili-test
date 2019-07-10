@@ -12,7 +12,7 @@ class LifeTimesFun extends React.Component {
     componentWillMount () {
         this.timer = setInterval(() => {
             this.setState({ date: new Date() })
-        }, 2000);
+        }, 1000);
     }
     // 挂载
     componentDidMount() {

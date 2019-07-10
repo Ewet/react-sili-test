@@ -5,7 +5,7 @@ import { Layout, Menu, Icon } from 'antd';
 const { SubMenu } = Menu;
 const { Header, Content, Sider, Footer } = Layout;
 
-const FramLayout = (props) => {
+const FramLayout = () => {
   // 页面逻辑
   return (
     <Layout>
