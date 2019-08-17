@@ -1,4 +1,5 @@
 import React from 'react';
+import { connect } from 'react-redux'
 class Index extends React.Component {
     // 挂载
     componentDidMount() {
@@ -13,9 +14,16 @@ class Index extends React.Component {
 
     render() {
         return (
-            <div>outTime pages</div>
+            <div>outTime pages {this.props.name}</div>
         )
     }
 }
+const mapStateToProps = (state) => {
+    return {
+        name: state.name
+    }
+}
 
-export default Index;
+const Indexs = connect(mapStateToProps)(Index);
+
+export default Indexs;

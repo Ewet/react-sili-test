@@ -13,7 +13,7 @@ const TodoReducer = (state=[], action={}) => {
 }
 
 
-const reminders = (state = [], action = {}) => {
+const reminders = (state = [1], action = {}) => {
     switch (action.type) {
         case ADD_REMINDER: 
             return [
@@ -27,9 +27,31 @@ const reminders = (state = [], action = {}) => {
     }
 }
 
+
+const stateCount = (state = 2, action = {}) => {
+    switch (action.type) {
+        case 'COUNT': {
+            return action.count
+        }
+            
+        default: return state;
+
+    }
+}
+
+const myName = (state, action) => {
+    switch (action.type) {
+        case 'NAME':
+            return action.name
+        default: return state || 'chen';
+    }
+}
+
 const reducer = combineReducers({
     list: TodoReducer,
-    reminderState: reminders
+    reminderState: reminders,
+    count: stateCount,
+    name: myName
 });
 
 export default reducer;

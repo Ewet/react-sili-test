@@ -44,3 +44,25 @@ function createStore (state, stateChanger) {
   return { getState, dispatch, subscribe }
 }
 
+
+
+#### 插件
+代码提示vscode插件
+  Simple React Snippets
+
+
+
+#### 功能点流程
+1.创建一个store
+
+a.通过createStore创建一个store，把store传入Provider模块中，在全局才可以使用
+b.在reducer中定义不同变量的actions，通过combineReducers模块组合所有的reducer；把reducer传给store中
+c.在actions中定义action.type；传给reducer和mapDispatchToProps使用；
+d.通过mapStateToProps来获取reduce中state的值；
+e.通过mapDispatchToProps中的dispatch和actions来改变store中state的值；
+f.通过connect模块把mapStateToProps、mapDispatchToProps和render绑定到一起再暴露出去；
+g.通过this.props在页面元素中使用state；
+
+
+
+

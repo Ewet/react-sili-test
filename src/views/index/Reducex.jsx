@@ -11,6 +11,11 @@ class Redux extends Component {
                         return <li key={index}>{item}</li>
                     })}
                 </ul>
+                <div>
+                    <button onClick={ () => this.props.getCount(this.props.count + 1) }>change count</button>
+                    {this.props.count}<br/>
+                    {this.props.name}
+                </div>
             </div>
         )
     }
@@ -18,7 +23,9 @@ class Redux extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        listData: state.list
+        listData: state.list,
+        count: state.count,
+        name: state.name
     }
 }
 
@@ -28,6 +35,12 @@ const mapDispatchToProps = (dispatch) => {
             dispatch({
                 type: 'ADD_TODO',
                 payload: todoValue
+            })
+        },
+        getCount: function(addCount) {
+            dispatch({
+                type: 'COUNT',
+                count: addCount
             })
         }
     }
